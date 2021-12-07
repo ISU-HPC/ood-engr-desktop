@@ -1,0 +1,65 @@
+---
+attributes:
+  desktop: "mate"
+  bc_vnc_idle: 0
+  bc_vnc_resolution:
+    required: true
+  bc_queue:
+    value: debug
+
+  slurm_account:
+    widget: select
+    label: "Account"
+    options:
+    <% `sacctmgr show -PQrn associations User=${USER} | cut -d '|' -f 2`.split("\n").each do |val| %>
+      - ["<%= val %>", "<%= val %>"]
+    <% end %>
+    required: true
+
+  slurm_partition:
+    value: ondemand
+    widget: select
+    label: "Slurm Partition"
+    options:
+      - [ "ondemand" , "ondemand" ]
+    help: Jobs must run on the OnDemand partition, which has a 24-hour time limit
+
+  bc_num_slots: "1"
+
+  num_cores:
+    widget: "number_field"
+    label: "Number of cores"
+    value: 2
+    help: |
+      Number of cores.
+    min: 0
+    max: 36
+    step: 1
+    id: 'num_cores'
+    required: true
+
+  mem_req:
+    label: "Memory required"
+    help: "If no unit specified, Megabytes.  Can use 'k', 'M', 'G' suffixes.  NO DECIMALS.  Example: 3072M"
+    widget: text_field
+    value: "6000M"
+
+  job_name:
+    label: "Job name"
+    help: "Name of job shown in queue"
+    value: "Ceres Desktop"
+    widget: text_field
+
+
+form:
+  - bc_vnc_idle
+  - desktop
+  - bc_vnc_resolution
+  - slurm_account
+  - slurm_partition
+  - bc_num_hours
+  - bc_num_slots
+  - num_cores
+  - mem_req
+  - job_name
+
