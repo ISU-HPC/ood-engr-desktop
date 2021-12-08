@@ -1,6 +1,22 @@
+<%-
+  cmd = "/usr/bin/sinfo -ho %R"
+  begin
+    output, status = Open3.capture2e(cmd)
+    if status.success?
+      queues = output.split("\n").map(&:strip).reject(&:blank?).sort
+    else
+      raise output
+    end
+  rescue => e
+    queues = []
+    error = e.message.strip
+  end 
+-%>
+
+
 ---
 attributes:
-  desktop: "mate"
+  desktop: "xfce"
   bc_vnc_idle: 0
   bc_vnc_resolution:
     required: true
@@ -16,13 +32,25 @@ attributes:
     <% end %>
     required: true
 
-  slurm_partition:
-    value: ondemand
+  custom_queue:
+    label: Queue
+    help: Select queue from the drop-down
+    <%- if error -%>
+      <span class="text-danger">Error when parsing queues:</span>
+      ```
+      <%= error.gsub("\n", "\n      ") %>
+      ```
+    <%- end -%>
+  <%- if queues.blank? -%>
+    widget: text_field
+  <%- else -%>
     widget: select
-    label: "Slurm Partition"
     options:
-      - [ "ondemand" , "ondemand" ]
-    help: Jobs must run in the ondemand partition, which has a 24-hour time limit
+    <%- queues.each do |q| -%>
+      - [ "<%= q %>", "<%= q %>" ]
+    <%- end -%>
+  <%- end -%> 
+
 
   bc_num_slots: "1"
 
@@ -31,9 +59,9 @@ attributes:
     label: "Number of cores"
     value: 2
     help: |
-      Number of cores.
+      Number of cores.  Must be between 1 and 16.
     min: 0
-    max: 36
+    max: 16
     step: 1
     id: 'num_cores'
     required: true
@@ -42,12 +70,12 @@ attributes:
     label: "Memory required"
     help: "If no unit specified, Megabytes.  Can use 'k', 'M', 'G' suffixes.  NO DECIMALS.  Example: 3072M"
     widget: text_field
-    value: "6000M"
+    value: "4096M"
 
   job_name:
     label: "Job name"
     help: "Name of job shown in queue"
-    value: "Ceres Desktop"
+    value: "hpc-class Desktop"
     widget: text_field
 
 
@@ -56,7 +84,7 @@ form:
   - desktop
   - bc_vnc_resolution
   - slurm_account
-  - slurm_partition
+  - custom_queue
   - bc_num_hours
   - bc_num_slots
   - num_cores

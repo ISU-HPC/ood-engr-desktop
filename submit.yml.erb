@@ -3,7 +3,7 @@ batch_connect:
   template: vnc
 
 script:
-  queue_name: "<%= slurm_partition %>"
+  queue_name: "<%= custom_queue %>"
   accounting_id: "<%= slurm_account %>"
   native:
     - "--ntasks=<%= num_cores.blank? ? 1 : num_cores.to_i %>"
