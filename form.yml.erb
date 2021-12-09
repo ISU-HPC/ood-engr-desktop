@@ -17,12 +17,19 @@ attributes:
     required: true
 
   slurm_partition:
-    value: ondemand
+    value: short
     widget: select
     label: "Slurm Partition"
+    help: |
+      **Priority partitions available only to those users who purchased nodes**
     options:
-      - [ "ondemand" , "ondemand" ]
-    help: Jobs must run in the ondemand partition, which has a 24-hour time limit
+    <% `/usr/bin/sinfo -ho "%R,%l"`.split("\n").each do |val| %>
+    <%  p = val.split(",")[0] %>
+    <%  pp = val.split(",")[0].ljust(24,'-') %>
+    <%  t = val.split(",")[1].rjust(24) %>
+      - [ " <%= pp %>-- Max Time: <%= t %>" , "<%= p %>"]
+    <% end %>
+    required: true
 
   bc_num_slots: "1"
 
@@ -50,6 +57,17 @@ attributes:
     value: "Ceres Desktop"
     widget: text_field
 
+  slurm_qos:
+    label: "QOS"
+    help: "Job QOS, only required for priority partitions"
+    value: "400thread"
+    widget: select
+    options:
+    <% `sacctmgr show -PQrn associations User=${USER} | cut -d '|' -f 18 | sort -u`.split(",").each do |val| %>
+      - ["<%= val %>", "<%= val %>"]
+    <% end %>
+    required: true
+
 
 form:
   - bc_vnc_idle
@@ -57,6 +75,7 @@ form:
   - bc_vnc_resolution
   - slurm_account
   - slurm_partition
+  - slurm_qos
   - bc_num_hours
   - bc_num_slots
   - num_cores
