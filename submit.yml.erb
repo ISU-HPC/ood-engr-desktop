@@ -3,11 +3,11 @@ batch_connect:
   template: vnc
 
 script:
-  queue_name: "<%= slurm_partition %>"
-  accounting_id: "<%= slurm_account %>"
+  queue_name: "<%= slurm_partition.delete(' ') %>"
+  accounting_id: "<%= slurm_account.delete(' ') %>"
   native:
     - "--ntasks=<%= num_cores.blank? ? 1 : num_cores.to_i %>"
     - "--nodes=<%= bc_num_slots.blank? ? 1 : bc_num_slots.to_i %>"
     - "--mem=<%= mem_req %>" 
-    - "--job-name=<%= job_name %>"
-    - "--qos=<%= slurm_qos %>"
+    - "--job-name=<%= job_name.delete(' ') %>"
+    - "--qos=<%= slurm_qos.delete(' ') %>"

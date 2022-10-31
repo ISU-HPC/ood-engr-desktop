@@ -8,37 +8,15 @@
 
 
 ---
+cluster: "ceres"
+
 attributes:
-  desktop: "mate"
+  desktop: "xfce"
   bc_vnc_idle: 0
   bc_vnc_resolution:
     required: true
   bc_queue:
     value: debug
-
-#  slurm_account:
-#    widget: select
-#    label: "Account"
-#    options:
-#    <% `sacctmgr show -PQrn associations User=${USER} | cut -d '|' -f 2`.split("\n").each do |val| %>
-#      - ["<%= val %>", "<%= val %>"]
-#    <% end %>
-#    required: true
-#
-#  slurm_partition:
-#    value: short
-#    widget: select
-#    label: "Slurm Partition"
-#    help: |
-#      **Priority partitions available only to those users who purchased nodes**
-#    options:
-#    <% `/usr/bin/sinfo -ho "%R,%l"`.split("\n").each do |val| %>
-#    <%  p = val.split(",")[0] %>
-#    <%  pp = val.split(",")[0].ljust(24,'-') %>
-#    <%  t = val.split(",")[1].rjust(24) %>
-#      - [ " <%= pp %>-- Max Time: <%= t %>" , "<%= p %>"]
-#    <% end %>
-#    required: true
 
   slurm_partition:
     label: Queue
