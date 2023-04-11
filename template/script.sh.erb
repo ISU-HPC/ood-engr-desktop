@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Copy resource files to correct locations in users home directory
+cp -r "../engrDesktop/desktop-directories" "${HOME}/.local/share/"
+cp "../engrDesktop/xfce-applications.menu" "${HOME}/.config/menus/"
+
 # Change working directory to user's home directory
 cd "${HOME}"
 
