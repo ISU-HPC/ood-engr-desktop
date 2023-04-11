@@ -10,6 +10,9 @@ if [[ ! -e "${PANEL_CONFIG}" ]]; then
   cp "/etc/xdg/xfce4/panel/default.xml" "${PANEL_CONFIG}"
 fi
 
+#Copy engineering panel config
+cp "../../engrDesktop/engrPanel.xml" "${PANEL_CONFIG}"
+
 # Disable startup services
 xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -n -t bool -s false
 xfconf-query -c xfce4-session -p /startup/gpg-agent/enabled -n -t bool -s false
