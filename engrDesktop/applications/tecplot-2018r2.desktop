@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/tecplot/tecplot.png
+Exec=/home/anthomas/engrDesktop/tecplot/tecplot-2018r2.sh
+StartupNotify=true
+Categories=Tecplot;
+Name=Tecplot 2018 R2
+

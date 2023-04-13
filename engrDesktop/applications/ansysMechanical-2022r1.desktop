@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/ansysMechanical/ansysMechanical.png
+Exec=/home/anthomas/engrDesktop/ansysMechanical/ansysMechanical-2022r1.sh
+StartupNotify=true
+Categories=AnsysMechanical;
+Name=Ansys Mechanical 2022 R1
+Comment=Latest Version

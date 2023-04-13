@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/paraview/paraview.png
+Exec=/home/anthomas/engrDesktop/paraview/paraview-5.10.1.sh
+StartupNotify=true
+Categories=ParaView;
+Name=ParaView 5.10.1
+Comment=Latest Version

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/starccm/starccm.png
+Exec=/home/anthomas/engrDesktop/starccm/starccm-14.04.011.sh
+StartupNotify=true
+Categories=Starccm;
+Name=STAR-CCM 14.04.011

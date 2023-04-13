@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/ansysMechanical/ansysMechanical.png
+Exec=/home/anthomas/engrDesktop/ansysMechanical/ansysMechanical-2019r4.sh
+StartupNotify=true
+Categories=AnsysMechanical;
+Name=Ansys Mechanical 2019 R4

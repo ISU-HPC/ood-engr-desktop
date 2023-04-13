@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=/home/anthomas/engrDesktop/starccm/starccm.png
+Exec=/home/anthomas/engrDesktop/starccm/starccm-16.04.012-R8.sh
+StartupNotify=true
+Categories=Starccm;
+Name=STAR-CCM 16.04.012 (Double Precision)
