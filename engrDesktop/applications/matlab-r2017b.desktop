@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Icon=/home/anthomas/engrDesktop/matlab/matlab.png
+Icon=matlab.png
 Exec=/home/anthomas/engrDesktop/matlab/matlab-r2017b.sh
 StartupNotify=true
 Categories=MATLAB;

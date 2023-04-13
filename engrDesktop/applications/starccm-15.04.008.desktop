@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Icon=/home/anthomas/engrDesktop/starccm/starccm.png
+Icon=starccm.png
 Exec=/home/anthomas/engrDesktop/starccm/starccm-15.04.008.sh
 StartupNotify=true
 Categories=Starccm;

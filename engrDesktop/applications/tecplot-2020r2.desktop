@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Icon=/home/anthomas/engrDesktop/tecplot/tecplot.png
+Icon=tecplot.png
 Exec=/home/anthomas/engrDesktop/tecplot/tecplot-2020r2.sh
 StartupNotify=true
 Categories=Tecplot;
