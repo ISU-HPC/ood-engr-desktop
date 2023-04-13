@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Icon=starccm.png
-Exec=/home/anthomas/engrDesktop/starccm/starccm-14.04.011-R8.sh
+Exec=changeMe/engrDesktop/starccm/starccm-14.04.011-R8.sh
 StartupNotify=true
 Categories=Starccm;
 Name=STAR-CCM 14.04.011 (Double Precision)

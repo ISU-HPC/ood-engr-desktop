@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 #Icon=
-Exec=/home/anthomas/engrDesktop/bar.sh
+Exec=changeMe/engrDesktop/bar.sh
 StartupNotify=true
 Categories=Engineering;
 Name=Foo

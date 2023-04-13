@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Icon=starccm.png
-Exec=/home/anthomas/engrDesktop/starccm/starccm-12.04.010.sh
+Exec=changeMe/engrDesktop/starccm/starccm-12.04.010.sh
 StartupNotify=true
 Categories=Starccm;
 Name=STAR-CCM 12.04.010

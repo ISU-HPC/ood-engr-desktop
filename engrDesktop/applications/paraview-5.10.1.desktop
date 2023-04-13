@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Icon=paraview.png
-Exec=/home/anthomas/engrDesktop/paraview/paraview-5.10.1.sh
+Exec=changeMe/engrDesktop/paraview/paraview-5.10.1.sh
 StartupNotify=true
 Categories=ParaView;
 Name=ParaView 5.10.1

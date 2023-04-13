@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Icon=matlab.png
-Exec=/home/anthomas/engrDesktop/matlab/matlab-r2018a.sh
+Exec=changeMe/engrDesktop/matlab/matlab-r2018a.sh
 StartupNotify=true
 Categories=MATLAB;
 Name=MATLAB R2018a
