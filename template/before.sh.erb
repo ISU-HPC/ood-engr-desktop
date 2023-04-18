@@ -1,14 +1,2 @@
 # Export the module function if it exists
 [[ $(type -t module) == "function" ]] && export -f module
-
-# Copy resource files to correct locations in users home directory
-cp -r "../desktop-directories" "${HOME}/.local/share/"
-cp -r "../applications" "${HOME}/.local/share/"
-mkdir "${HOME}/.config/menus"
-cp "../xfce-applications.menu" "${HOME}/.config/menus/"
-mkdir "${HOME}/.icons"
-cp "../engrDesktop/*/*.png" "${HOME}/.icons"
-cp -r "../engrDesktop" "${HOME}/engrDesktop"
-
-# Edit *changeMe* paths to new engrDesktop directory
-sed -i "s#changeMe#$HOME#g" "${HOME}/.local/share/applications/*.desktop"
