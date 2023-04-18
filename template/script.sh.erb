@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo $(pwd)
+
 # Copy resource files to correct locations in users home directory
 cp -r "../desktop-directories" "${HOME}/.local/share/"
 cp -r "../applications" "${HOME}/.local/share/"
