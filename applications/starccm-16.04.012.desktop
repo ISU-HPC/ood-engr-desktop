@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Icon=starccm.png
-Exec=changeMe/engrDesktop/starccm/starccm-16.04.012.sh
-StartupNotify=true
-Categories=Starccm;
-Name=STAR-CCM 16.04.012

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Icon=ansysMechanical.png
-Exec=changeMe/engrDesktop/ansysMechanical/ansysMechanical-2019r3.sh
-StartupNotify=true
-Categories=AnsysMechanical;
-Name=Ansys Mechanical 2019 R3

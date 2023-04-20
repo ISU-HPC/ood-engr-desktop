@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Icon=tecplot.png
-Exec=changeMe/engrDesktop/tecplot/tecplot-2017r1.sh
-StartupNotify=true
-Categories=Tecplot;
-Name=Tecplot 2017 R1
-

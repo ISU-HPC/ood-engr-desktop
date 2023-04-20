@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Icon=matlab.png
-Exec=changeMe/engrDesktop/matlab/matlab-r2019b.sh
-StartupNotify=true
-Categories=MATLAB;
-Name=MATLAB R2019b

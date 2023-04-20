@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Icon=ansysMechanical.png
-Exec=changeMe/engrDesktop/ansysMechanical/ansysMechanical-2020r2.sh
-StartupNotify=true
-Categories=AnsysMechanical;
-Name=Ansys Mechanical 2020 R2
