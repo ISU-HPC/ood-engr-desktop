@@ -1,6 +1,6 @@
 ---
-name: Desktop
-icon: fa://desktop
+name: Engineering Desktop
+icon: fa://cog
 category: Interactive Apps
 subcategory: Desktops
 role: batch_connect

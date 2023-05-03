@@ -11,7 +11,7 @@ if [[ ! -e "${PANEL_CONFIG}" ]]; then
 fi
 
 #Copy engineering panel config
-cp "../../engrDesktop/engrPanel.xml" "${PANEL_CONFIG}"
+cp "/shared/ondemand/engrDesktop/engrPanel.xml" "${PANEL_CONFIG}"
 
 # Disable startup services
 xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -n -t bool -s false
