@@ -11,6 +11,6 @@ script:
     - "--nodes=<%= bc_num_slots.blank? ? 1 : bc_num_slots.to_i %>"
     - "--mem=<%= mem_req %>" 
     - "--job-name=<%= job_name %>"
-    <%- if custom_queue.include? "gpu" or custom_queue.include? "a100" -%>
+    <%- if !gres.blank? -%>
     - "--gres=<%= gres %>"
     <%- end -%>
