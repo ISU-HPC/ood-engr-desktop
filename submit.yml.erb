@@ -14,3 +14,6 @@ script:
     <%- if !gres.blank? -%>
     - "--gres=<%= gres %>"
     <%- end -%>
+    <%- extra_arguments.split.each do |e| -%>
+    - "<%= e %>"
+    <%- end -%>
